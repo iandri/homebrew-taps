@@ -5,21 +5,21 @@
 class Ics < Formula
   desc "Convert jira ticket to ics file"
   homepage "https://github.com/iandri/ics"
-  version "0.0.10"
+  version "0.0.13"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/iandri/ics/releases/download/v0.0.10/ics_0.0.10_Darwin_arm64.tar.gz"
-      sha256 "777a2c6cecb4ec9ef502d2e972e0791e8e941cd1658dc1e6c2e9c2f8bd364688"
+      url "https://github.com/iandri/ics/releases/download/v0.0.13/ics_0.0.13_Darwin_arm64.tar.gz"
+      sha256 "1cf3dfdf796b92e41ee241ce402525e064cc2341436caa8820ab412f731d283f"
 
       def install
         bin.install "ics"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iandri/ics/releases/download/v0.0.10/ics_0.0.10_Darwin_x86_64.tar.gz"
-      sha256 "bdf29eeaa3591a7318223498656d34b7ecb6a4bdac429a0980b45cc91d814221"
+      url "https://github.com/iandri/ics/releases/download/v0.0.13/ics_0.0.13_Darwin_x86_64.tar.gz"
+      sha256 "61a91d0ff75fedfa9441d8b7f6f8175625b54f4f2b8c3db64f40165e0b738101"
 
       def install
         bin.install "ics"
@@ -28,17 +28,17 @@ class Ics < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/iandri/ics/releases/download/v0.0.10/ics_0.0.10_Linux_x86_64.tar.gz"
-      sha256 "e1b5ec190e5e636244385afe9f2a7b76c640277f693ec635e0af693d8082c7ad"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/iandri/ics/releases/download/v0.0.13/ics_0.0.13_Linux_arm64.tar.gz"
+      sha256 "27a1e1c124a759f4baf8163ee85e7bd177743e8fa6f7e449a8f668d0bdef15ac"
 
       def install
         bin.install "ics"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iandri/ics/releases/download/v0.0.10/ics_0.0.10_Linux_arm64.tar.gz"
-      sha256 "abdc4e665ec65db08b082be41251eb9fa6e82e30cb56ea4fb03d0ff392cf0e4e"
+    if Hardware::CPU.intel?
+      url "https://github.com/iandri/ics/releases/download/v0.0.13/ics_0.0.13_Linux_x86_64.tar.gz"
+      sha256 "6b2b724c89c69930270e6d3001cf6583bcaed9c2050aeee1a784f034770d4f85"
 
       def install
         bin.install "ics"
