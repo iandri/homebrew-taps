@@ -5,21 +5,21 @@
 class Ics < Formula
   desc "Convert jira ticket to ics file"
   homepage "https://github.com/iandri/ics"
-  version "0.0.13"
+  version "0.0.14"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/iandri/ics/releases/download/v0.0.13/ics_0.0.13_Darwin_arm64.tar.gz"
-      sha256 "1cf3dfdf796b92e41ee241ce402525e064cc2341436caa8820ab412f731d283f"
+      url "https://github.com/iandri/ics/releases/download/v0.0.14/ics_0.0.14_Darwin_arm64.tar.gz"
+      sha256 "02d7bbaad5fa8d564f037d897d80cc4771673517ab564a7f960a04ab7d318281"
 
       def install
         bin.install "ics"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iandri/ics/releases/download/v0.0.13/ics_0.0.13_Darwin_x86_64.tar.gz"
-      sha256 "61a91d0ff75fedfa9441d8b7f6f8175625b54f4f2b8c3db64f40165e0b738101"
+      url "https://github.com/iandri/ics/releases/download/v0.0.14/ics_0.0.14_Darwin_x86_64.tar.gz"
+      sha256 "60ca168b12ebe0766b03f85cd367d52f3e9001e0838f8837eeed149b0e0bb1c9"
 
       def install
         bin.install "ics"
@@ -29,16 +29,16 @@ class Ics < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iandri/ics/releases/download/v0.0.13/ics_0.0.13_Linux_arm64.tar.gz"
-      sha256 "27a1e1c124a759f4baf8163ee85e7bd177743e8fa6f7e449a8f668d0bdef15ac"
+      url "https://github.com/iandri/ics/releases/download/v0.0.14/ics_0.0.14_Linux_arm64.tar.gz"
+      sha256 "33fe4fde7f62d0ed4e41893725721bb3d051d15c42bede274942ed391542a05d"
 
       def install
         bin.install "ics"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iandri/ics/releases/download/v0.0.13/ics_0.0.13_Linux_x86_64.tar.gz"
-      sha256 "6b2b724c89c69930270e6d3001cf6583bcaed9c2050aeee1a784f034770d4f85"
+      url "https://github.com/iandri/ics/releases/download/v0.0.14/ics_0.0.14_Linux_x86_64.tar.gz"
+      sha256 "ce64f702e92506f6e8308f1a5e0542cc0092275eec1ae5bdf8ce1c3e832e7fa1"
 
       def install
         bin.install "ics"
